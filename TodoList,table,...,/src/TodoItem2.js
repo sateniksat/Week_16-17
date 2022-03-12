@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 
-export default class TodoItem2 extends Component {
+export default class TodoItem2 extends PureComponent {
   render() {
     return (
       <li style={{background:"white",color:'black',display:'flex', justifyContent:"space-between"}}>

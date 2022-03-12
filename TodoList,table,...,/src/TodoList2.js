@@ -1,14 +1,15 @@
-import React, {Component} from "react";
+import React, {PureComponent} from "react";
 import TodoItem2 from './TodoItem2.js';
+import Done from './Done.js';
 
 
-class ToDoList2 extends Component{
+class ToDoList2 extends PureComponent{
 constructor(props){
     super(props)
     this.state={
         value: '',
         list:[],
-        done:["---------"]
+        done:[]
     }
     this.addTodo=this.addTodo.bind(this);
     this.removeTodo=this.removeTodo.bind(this);
@@ -91,6 +92,10 @@ doneTodo(todo){
              />)}
                 <h3>Done list</h3>
                 {this.state.done.map((todo,i)=><li>{todo.todo}</li> )}
+                <h3>DONE PERCENT</h3>
+                <div>
+                <Done done={this.state.done.length} list={this.state.list.length} />
+                </div>
             </ul>
         )
     }

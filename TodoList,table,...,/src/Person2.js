@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 // import TodoItem2 from "./TodoItem2";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {Form} from "react-bootstrap";
 import ToDoList2 from "./TodoList2";
 
 
-export class Person extends Component {
+export class Person extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
